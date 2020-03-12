@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế</title>
+</head>
+<body>
+<h1>Tính thuế thu nhập cá nhân</h1>
+Nhập vào:<input type="text" id="nhapvao">
+Kết quả:<input type="text" id="ketqua">
+<button type="button" onclick="kiemtra()">kiểm tra</button>
+</body>
+<script>
+    function kiemtra() {
+        let a = document.getElementById("nhapvao").value;
+        a = parseInt(a);
+        let b;
+        if (a <= 5000000) {
+            b = (a * 5 / 100);
+            document.getElementById("ketqua").value=b;
+        } else if (a <= 10000000 && a > 5000000) {
+            b = (5000000 * 5 / 100) + (5000000 * 10 / 100);
+            document.getElementById("ketqua").value=b;
+        } else if (a => 10000000 && a <= 18000000) {
+            b = (5000000 * 5 / 100) + (5000000 * 10 / 100) + (8000000 * 15 / 100);
+            document.getElementById("ketqua").value=b;
+        } else b = (5000000 * 5 / 100) + (5000000 * 10 / 100) + (5000000 * 15 / 100) + (8000000 * 20 / 100);
+        document.getElementById("ketqua").value=b;
+    }
+
+
+</script>
+</html>

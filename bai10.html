@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giá điện</title>
+</head>
+<h1>Tính tiền điện</h1>
+nhập số:<input type="text" id="nhapso"><br>
+kết quả:<input type="text" id="result">
+<button type="button" onclick=tinhtien()>tính tiền</button>
+<body>
+<script>
+    function tinhtien() {
+    let a = document.getElementById("nhapso").value;
+    let b;
+    a= parseInt(a);
+    if (a<=50) {
+        b  = a*1678;
+        document.getElementById('result').value = b;
+    } else if (50<=a && a<=100) {
+            b= ((50*1678) + ((a-50)*1734));
+        document.getElementById('result').value = b;
+    }else if (a=>100 && a<=200){
+        b=(50*1678)+(50*1734)+((a-100)*2014);
+        document.getElementById('result').value = b;
+    }else b= (50*1678)+(50*1734)+(100*2014)+((a-200)*2536);
+        document.getElementById('result').value = b;
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = Number(prompt("số thứ nhất"));
+    let b = Number(prompt("số thứ hai"));
+    let c = Number(prompt("số thứ ba"));
+    let delta = (b*b)-(4*a*c);
+    let d=Math.sqrt(delta);
+    let x1 = (-b-d)/(2*a);
+    let x2 = (-b+d)/(2*a);
+    let x = -b/(2*a);
+    if (delta<0){
+        alert("phương trình vô nghiệm");
+    }else alert("phương trình có nghiệm:"+x1 )
+     alert("phương trình có nghiệm: "+x2);
+    if (delta=0){
+        alert("phương trình có nghiệm kép"+x);
+    }
+</script>
+
+</body>
+</html>
